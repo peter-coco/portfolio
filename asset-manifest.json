@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/coco-peter/portfolio/static/css/main.ede7d3b9.chunk.css",
+    "main.js": "/coco-peter/portfolio/static/js/main.2ce6c6d3.chunk.js",
+    "main.js.map": "/coco-peter/portfolio/static/js/main.2ce6c6d3.chunk.js.map",
+    "runtime-main.js": "/coco-peter/portfolio/static/js/runtime-main.c0a8a951.js",
+    "runtime-main.js.map": "/coco-peter/portfolio/static/js/runtime-main.c0a8a951.js.map",
+    "static/js/2.d770583b.chunk.js": "/coco-peter/portfolio/static/js/2.d770583b.chunk.js",
+    "static/js/2.d770583b.chunk.js.map": "/coco-peter/portfolio/static/js/2.d770583b.chunk.js.map",
+    "static/js/3.87eaf5e1.chunk.js": "/coco-peter/portfolio/static/js/3.87eaf5e1.chunk.js",
+    "static/js/3.87eaf5e1.chunk.js.map": "/coco-peter/portfolio/static/js/3.87eaf5e1.chunk.js.map",
+    "index.html": "/coco-peter/portfolio/index.html",
+    "static/css/main.ede7d3b9.chunk.css.map": "/coco-peter/portfolio/static/css/main.ede7d3b9.chunk.css.map",
+    "static/js/2.d770583b.chunk.js.LICENSE.txt": "/coco-peter/portfolio/static/js/2.d770583b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c0a8a951.js",
+    "static/js/2.d770583b.chunk.js",
+    "static/css/main.ede7d3b9.chunk.css",
+    "static/js/main.2ce6c6d3.chunk.js"
+  ]
+}
