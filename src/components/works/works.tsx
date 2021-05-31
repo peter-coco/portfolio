@@ -1,5 +1,3 @@
-import { Navbar } from "../navbar/navbar";
-
 import { Icon, InlineIcon } from "@iconify/react";
 import sharpNavigateNext from "@iconify/icons-ic/sharp-navigate-next";
 import htmlFive2 from "@iconify/icons-icomoon-free/html-five2";
@@ -10,6 +8,10 @@ import linkOut from "@iconify/icons-akar-icons/link-out";
 
 import { useState, useEffect } from "react";
 
+import project1 from "../../image/projects1.png";
+import project2 from "../../image/projects2.png";
+import project3 from "../../image/projects3.png";
+
 import "./works.css";
 
 function Worklist({
@@ -18,18 +20,14 @@ function Worklist({
   subscription,
   position,
 }: {
-  imageSrc: string;
+  imageSrc: any;
   title: string;
   subscription: string;
   position: string;
 }) {
   return (
     <li className="works-list">
-      <img
-        src={require(imageSrc).default}
-        alt=""
-        className="works-list-image"
-      />
+      <img src={imageSrc} alt="" className="works-list-image" />
       <div className="works-list-detail">
         <div className="works-list-detail-title">{title}</div>
         <div className="works-list-detail-subscription">{subscription}</div>
@@ -55,21 +53,22 @@ export function Works({ worksToggle }: { worksToggle: boolean }) {
   const [projectsIdx, setProjectsIdx] = useState<number>(0);
   const [workListWidth, setWorkListWidth] = useState<number>(window.innerWidth);
 
+  // console.log(project1, project2, project3);
   const workListArray = [
     [
-      "/projects1.JPG",
+      `${project1}`,
       "포트폴리오 웹 사이트",
       "포트폴리오 웹 사이트를 React를 사용하여 SPA로 구현하였습니다.",
       "기획, 디자인, 개발",
     ],
     [
-      "/projects2.JPG",
+      `${project2}`,
       "Music Player",
       "react를 이용하여 music player app을 구현해봤습니다.",
       "기획, 디자인, 개발",
     ],
     [
-      "/projects3.JPG",
+      `${project3}`,
       "독도 재단 랜딩페이지",
       "독도 재단 홈페이지를 react로 클론코딩하였습니다.",
       "개발",

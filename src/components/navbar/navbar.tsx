@@ -3,6 +3,9 @@ import { useState, useCallback } from "react";
 import { Contact } from "../contact/contact";
 import "./navbar.css";
 
+import main_logo from "../../image/main-logo.png";
+import nav_logo from "../../image/navbar-logo.png";
+
 export function Navbar({
   homeToggle,
   aboutToggle,
@@ -31,7 +34,8 @@ export function Navbar({
           id={
             homeToggle ? "navbar-main-menus-logo" : "navbar-others-menus-logo"
           }
-          src="/navbar-logo.png"
+          // src="image/navbar-logo.png"
+          src={nav_logo}
           alt="fd"
           width="70"
           height="70"
@@ -90,7 +94,8 @@ export function Navbar({
       <div id={homeToggle ? "navbar-main-logo" : "navbar-others-logo"}>
         <img
           id={homeToggle ? "navbar-main-logo-img" : "navbar-others-logo-img"}
-          src={process.env.PUBLIC_UTL + "/main-logo.png"}
+          // src="/image/main-logo.png"
+          src={main_logo}
           alt="ff"
           width="350"
           height="400"
@@ -173,7 +178,7 @@ export function Navbar({
             WORKS
           </li>
         </ul>
-        <img src="/image/navbar-logo.png" alt="fd" width="70" height="70" />
+        <img src={nav_logo} alt="fd" width="70" height="70" />
       </div>
     </nav>
   );
