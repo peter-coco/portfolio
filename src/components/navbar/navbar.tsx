@@ -31,7 +31,7 @@ export function Navbar({
           id={
             homeToggle ? "navbar-main-menus-logo" : "navbar-others-menus-logo"
           }
-          src="/image/navbar-logo.png"
+          src="/navbar-logo.png"
           alt="fd"
           width="70"
           height="70"
@@ -90,7 +90,7 @@ export function Navbar({
       <div id={homeToggle ? "navbar-main-logo" : "navbar-others-logo"}>
         <img
           id={homeToggle ? "navbar-main-logo-img" : "navbar-others-logo-img"}
-          src="/image/main-logo.png"
+          src={process.env.PUBLIC_UTL + "/main-logo.png"}
           alt="ff"
           width="350"
           height="400"

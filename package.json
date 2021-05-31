@@ -20,7 +20,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "npm run build &&gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -28,6 +30,7 @@
       "react-app/jest"
     ]
   },
+  "homepage": "https://coco-peter.github.io/portfolio",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -49,6 +52,7 @@
     "@iconify/icons-fluent": "^1.1.16",
     "@iconify/icons-ic": "^1.1.4",
     "@iconify/icons-icomoon-free": "^1.1.0",
-    "@iconify/react": "^1.1.4"
+    "@iconify/react": "^1.1.4",
+    "gh-pages": "^3.2.0"
   }
 }

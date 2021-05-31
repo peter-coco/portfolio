@@ -25,7 +25,11 @@ function Worklist({
 }) {
   return (
     <li className="works-list">
-      <img src={imageSrc} alt="" className="works-list-image" />
+      <img
+        src={require(imageSrc).default}
+        alt=""
+        className="works-list-image"
+      />
       <div className="works-list-detail">
         <div className="works-list-detail-title">{title}</div>
         <div className="works-list-detail-subscription">{subscription}</div>
@@ -53,19 +57,19 @@ export function Works({ worksToggle }: { worksToggle: boolean }) {
 
   const workListArray = [
     [
-      "/image/works/projects1.JPG",
+      "/projects1.JPG",
       "포트폴리오 웹 사이트",
       "포트폴리오 웹 사이트를 React를 사용하여 SPA로 구현하였습니다.",
       "기획, 디자인, 개발",
     ],
     [
-      "/image/works/projects2.JPG",
+      "/projects2.JPG",
       "Music Player",
       "react를 이용하여 music player app을 구현해봤습니다.",
       "기획, 디자인, 개발",
     ],
     [
-      "/image/works/projects3.JPG",
+      "/projects3.JPG",
       "독도 재단 랜딩페이지",
       "독도 재단 홈페이지를 react로 클론코딩하였습니다.",
       "개발",
