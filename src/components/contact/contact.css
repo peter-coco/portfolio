@@ -1,0 +1,23 @@
+#contact {
+  position: relative;
+  bottom: -40px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact > a {
+  margin-right: 20px;
+}
+
+@media (max-width: 800px) {
+  #contact {
+    bottom: -30px;
+  }
+
+  #contact > a {
+    margin-right: 10px;
+  }
+}

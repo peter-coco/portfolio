@@ -39,5 +39,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@iconify/icons-akar-icons": "^1.1.14",
+    "@iconify/icons-bx": "^1.1.0",
+    "@iconify/icons-cib": "^1.1.0",
+    "@iconify/icons-dashicons": "^1.1.0",
+    "@iconify/icons-fa-brands": "^1.1.0",
+    "@iconify/icons-fluent": "^1.1.16",
+    "@iconify/icons-ic": "^1.1.4",
+    "@iconify/icons-icomoon-free": "^1.1.0",
+    "@iconify/react": "^1.1.4"
   }
 }
