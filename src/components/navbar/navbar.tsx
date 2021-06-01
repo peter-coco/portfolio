@@ -3,7 +3,6 @@ import { useState, useCallback } from "react";
 import { Contact } from "../contact/contact";
 import "./navbar.css";
 
-import main_logo from "../../image/main-logo.png";
 import nav_logo from "../../image/navbar-logo.png";
 
 export function Navbar({
@@ -91,23 +90,7 @@ export function Navbar({
           </li>
         </ul>
       </div>
-      <div id={homeToggle ? "navbar-main-logo" : "navbar-others-logo"}>
-        <img
-          id={homeToggle ? "navbar-main-logo-img" : "navbar-others-logo-img"}
-          // src="/image/main-logo.png"
-          src={main_logo}
-          alt="ff"
-          width="350"
-          height="400"
-        />
 
-        <div
-          id={homeToggle ? "navbar-main-logo-text" : "navbar-others-logo-text"}
-        >
-          Front-End Developer
-        </div>
-        <Contact homeToggle={homeToggle} />
-      </div>
       <button
         id={navbarMenuBtnActivate ? "navbar-menuBtn-active" : "navbar-menuBtn"}
         onClick={navbarMenuBtnActivateFunc}

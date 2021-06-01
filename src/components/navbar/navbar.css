@@ -6,23 +6,6 @@
   height: 70%;
 }
 
-#navbar-main-logo {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  top: 25%;
-  /* top: 140px; */
-  /* top: 5%; */
-}
-
-#navbar-main-logo-img {
-  clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-  visibility: visible;
-  transition: all 800ms;
-  transition-delay: 1000ms;
-}
-
 #navbar-main-menus-logo {
   position: relative;
   left: 50px;
@@ -31,22 +14,6 @@
   visibility: hidden;
   transition: all 300ms;
   font-size: 23px;
-  color: #f2c94c;
-}
-
-#navbar-main-logo-text {
-  position: relative;
-
-  width: 90%;
-  margin: 0 auto;
-  text-align: center;
-  top: 20px;
-
-  font-size: 23px;
-  clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-  visibility: visible;
-  transition: all 300ms;
-  transition-delay: 1000ms;
   color: #f2c94c;
 }
 
@@ -76,24 +43,6 @@
   height: 400px;
 }
 
-#navbar-others-logo {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  top: 25%;
-  /* top: 140px; */
-  /* top: 5%; */
-}
-
-#navbar-others-logo-img {
-  /* transform: translate(-650px, -160px); */
-  clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
-  visibility: hidden;
-  transition: all 800ms;
-  /* transition-delay: 1000ms; */
-}
-
 #navbar-others-menus-logo {
   position: relative;
   left: 50px;
@@ -102,20 +51,6 @@
   visibility: visible;
   transition: all 300ms;
   transition-delay: 1000ms;
-  color: #f2c94c;
-}
-
-#navbar-others-logo-text {
-  position: relative;
-
-  width: 90%;
-  margin: 0 auto;
-  text-align: center;
-  top: 20px;
-  clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
-  visibility: hidden;
-  transition: all 300ms;
-  font-size: 23px;
   color: #f2c94c;
 }
 
@@ -246,16 +181,6 @@ button {
   position: relative;
   top: 50px;
 }
-/* #navbar-menuBtn-nonActivate {
-  opacity: 0;
-  position: fixed;
-  left: 0;
-  top: 0px !important;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-} */
 
 @media (max-width: 800px) {
   #navbar-main-menus,
@@ -267,20 +192,5 @@ button {
   #navbar-menuBtn-active {
     display: block;
     z-index: 2;
-  }
-
-  #navbar-main-logo-img,
-  #navbar-others-logo-img {
-    width: 50vw;
-    height: 30vh;
-  }
-
-  #navbar-main-logo-text,
-  #navbar-others-logo-text {
-    position: relative;
-    bottom: -15px;
-    width: 100%;
-    /* text-align: center; */
-    font-size: 1.5rem;
   }
 }

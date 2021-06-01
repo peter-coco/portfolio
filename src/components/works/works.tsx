@@ -111,7 +111,7 @@ export function Works({ worksToggle }: { worksToggle: boolean }) {
           style={{
             transition: "1000ms",
             transform:
-              workListWidth > 340
+              workListWidth > 400
                 ? `translate(${projectsIdx * -500}px)`
                 : `translate(${projectsIdx * -280}px)`,
           }}
