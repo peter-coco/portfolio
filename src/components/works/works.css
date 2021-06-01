@@ -172,9 +172,7 @@
   .link-icons {
     font-size: 20px;
   }
-}
 
-@media (max-width: 400px) {
   #works-wrap {
     /* width: 500px;
     height: 404px; */
@@ -206,3 +204,33 @@
     font-size: 15px;
   }
 }
+/* 
+@media (max-width: 400px) {
+  #works-wrap {
+    width: 280px;
+    height: 200px;
+  }
+
+  #works-lists {
+    width: 280px;
+    height: 200px;
+  }
+
+  .works-list-detail-title {
+    font-size: 15px;
+    margin-bottom: 3px;
+  }
+
+  .works-list-detail-subscription {
+    font-size: 11px;
+    margin-bottom: 3px;
+  }
+
+  .works-list-detail-languages {
+    margin-bottom: 3px;
+  }
+  .languages-icons,
+  .link-icons {
+    font-size: 15px;
+  }
+} */
