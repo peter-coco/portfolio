@@ -69,7 +69,7 @@ export function Works({ worksToggle }: { worksToggle: boolean }) {
       "Music Player",
       "react를 이용하여 music player app을 구현해봤습니다.",
       "기획, 디자인, 개발",
-      "https://coco-peter.github.io/dokdoLanding/",
+      "https://coco-peter.github.io/portfolio_musicPlayer/",
     ],
     [
       `${project3}`,
