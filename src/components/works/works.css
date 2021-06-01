@@ -40,6 +40,8 @@
 }
 
 .works-list-image {
+  /* max-width: 100%; */
+  width: 500px;
   height: 100%;
   opacity: 1;
   transition: all 300ms ease;
@@ -174,9 +176,6 @@
   }
 
   #works-wrap {
-    /* width: 500px;
-    height: 404px; */
-
     width: 280px;
     height: 200px;
   }
@@ -184,6 +183,10 @@
   #works-lists {
     width: 280px;
     height: 200px;
+  }
+
+  .works-list-image {
+    width: 280px;
   }
 
   .works-list-detail-title {
