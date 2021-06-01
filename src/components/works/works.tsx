@@ -19,11 +19,13 @@ function Worklist({
   title,
   subscription,
   position,
+  projectUrl,
 }: {
   imageSrc: any;
   title: string;
   subscription: string;
   position: string;
+  projectUrl: string;
 }) {
   return (
     <li className="works-list">
@@ -38,7 +40,7 @@ function Worklist({
           <Icon icon={typescriptIcon} className="languages-icons" />
         </div>
         <div className="works-list-detail-subscription">{position}</div>
-        <a className="link-icons" href="http://www.naver.com" target="_blank">
+        <a className="link-icons" href={projectUrl} target="_blank">
           <Icon icon={linkOut} />
         </a>
         {/* <div className="works-list-detail-subscription">
@@ -60,18 +62,21 @@ export function Works({ worksToggle }: { worksToggle: boolean }) {
       "포트폴리오 웹 사이트",
       "포트폴리오 웹 사이트를 React를 사용하여 SPA로 구현하였습니다.",
       "기획, 디자인, 개발",
+      "https://coco-peter.github.io/portfolio/",
     ],
     [
       `${project2}`,
       "Music Player",
       "react를 이용하여 music player app을 구현해봤습니다.",
       "기획, 디자인, 개발",
+      "https://coco-peter.github.io/dokdoLanding/",
     ],
     [
       `${project3}`,
       "독도 재단 랜딩페이지",
       "독도 재단 홈페이지를 react로 클론코딩하였습니다.",
       "개발",
+      "https://coco-peter.github.io/dokdoLandingPage/",
     ],
   ];
 
@@ -79,7 +84,7 @@ export function Works({ worksToggle }: { worksToggle: boolean }) {
     const alarmZoneTimer = setInterval(() => {
       setProjectsIdx((pre) => (pre + 1 === 3 ? 0 : pre + 1));
       // console.log(`hello : ${alarmZoneBannerIdx}`);
-    }, 3000);
+    }, 8000);
 
     return () => clearInterval(alarmZoneTimer);
   }, []);
@@ -116,15 +121,18 @@ export function Works({ worksToggle }: { worksToggle: boolean }) {
                 : `translate(${projectsIdx * -280}px)`,
           }}
         >
-          {workListArray.map(([imageSrc, title, subscription, position]) => (
-            <Worklist
-              key={title}
-              imageSrc={imageSrc}
-              title={title}
-              subscription={subscription}
-              position={position}
-            />
-          ))}
+          {workListArray.map(
+            ([imageSrc, title, subscription, position, projectUrl]) => (
+              <Worklist
+                key={title}
+                imageSrc={imageSrc}
+                title={title}
+                subscription={subscription}
+                position={position}
+                projectUrl={projectUrl}
+              />
+            )
+          )}
         </ul>
       </div>
       <div id="imageSequenceOperation">

@@ -12,7 +12,7 @@
   width: 100%;
   padding: 0 20px;
   box-sizing: border-box;
-  height: 50%;
+  height: 70%;
   top: 25%;
   display: flex;
 }
@@ -20,7 +20,7 @@
 #about-wrap {
   display: flex;
   max-width: 1000px;
-  padding: 0 15 px;
+  padding: 0 15px;
   box-sizing: border-box;
   height: 100%;
   margin: 0 auto;
@@ -133,6 +133,10 @@
 }
 
 @media (max-width: 800px) {
+  #about {
+    top: 20%;
+  }
+
   #about-wrap {
     flex-direction: column;
     max-width: 500px;
