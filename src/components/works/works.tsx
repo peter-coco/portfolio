@@ -5,6 +5,7 @@ import css3Icon from "@iconify/icons-fa-brands/css3";
 import bxlReact from "@iconify/icons-bx/bxl-react";
 import typescriptIcon from "@iconify/icons-cib/typescript";
 import linkOut from "@iconify/icons-akar-icons/link-out";
+import githubFill from "@iconify/icons-akar-icons/github-fill";
 
 import { useState, useEffect } from "react";
 
@@ -20,12 +21,14 @@ function Worklist({
   subscription,
   position,
   projectUrl,
+  projectGitUrl,
 }: {
   imageSrc: any;
   title: string;
   subscription: string;
   position: string;
   projectUrl: string;
+  projectGitUrl: string;
 }) {
   return (
     <li className="works-list">
@@ -40,12 +43,17 @@ function Worklist({
           <Icon icon={typescriptIcon} className="languages-icons" />
         </div>
         <div className="works-list-detail-subscription">{position}</div>
-        <a className="link-icons" href={projectUrl} target="_blank">
-          <Icon icon={linkOut} />
-        </a>
-        {/* <div className="works-list-detail-subscription">
-                2021.05.24 - 2021.05.31
-              </div> */}
+        <div
+          id="links"
+          style={{ display: "flex", margin: "0 auto", gap: "30px" }}
+        >
+          <a className="link-icons" href={projectUrl} target="_blank">
+            <Icon icon={linkOut} />
+          </a>
+          <a className="link-icons" href={projectGitUrl} target="_blank">
+            <Icon icon={githubFill} />
+          </a>
+        </div>
       </div>
     </li>
   );
@@ -63,6 +71,7 @@ export function Works({ worksToggle }: { worksToggle: boolean }) {
       "포트폴리오 웹 사이트를 React를 사용하여 SPA로 구현하였습니다.",
       "기획, 디자인, 개발",
       "https://coco-peter.github.io/portfolio/",
+      "https://github.com/coco-peter/portfolio",
     ],
     [
       `${project2}`,
@@ -70,6 +79,7 @@ export function Works({ worksToggle }: { worksToggle: boolean }) {
       "react를 이용하여 music player app을 구현해봤습니다.",
       "기획, 디자인, 개발",
       "https://coco-peter.github.io/portfolio_musicPlayer/",
+      "https://github.com/coco-peter/portfolio_musicPlayer",
     ],
     [
       `${project3}`,
@@ -77,6 +87,7 @@ export function Works({ worksToggle }: { worksToggle: boolean }) {
       "독도 재단 홈페이지를 react로 클론코딩하였습니다.",
       "개발",
       "https://coco-peter.github.io/dokdoLandingPage/",
+      "https://github.com/coco-peter/dokdoLandingPage",
     ],
   ];
 
@@ -122,7 +133,14 @@ export function Works({ worksToggle }: { worksToggle: boolean }) {
           }}
         >
           {workListArray.map(
-            ([imageSrc, title, subscription, position, projectUrl]) => (
+            ([
+              imageSrc,
+              title,
+              subscription,
+              position,
+              projectUrl,
+              projectGitUrl,
+            ]) => (
               <Worklist
                 key={title}
                 imageSrc={imageSrc}
@@ -130,6 +148,7 @@ export function Works({ worksToggle }: { worksToggle: boolean }) {
                 subscription={subscription}
                 position={position}
                 projectUrl={projectUrl}
+                projectGitUrl={projectGitUrl}
               />
             )
           )}

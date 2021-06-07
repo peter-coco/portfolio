@@ -8,8 +8,15 @@
   align-items: center;
 }
 
-#contact > a {
+.link-icons {
+  font-size: 40px;
+  color: #ffffff;
   margin-right: 20px;
+}
+
+.link-icons:hover {
+  color: #f2c94c;
+  transition: color 300ms ease;
 }
 
 @media (max-width: 800px) {

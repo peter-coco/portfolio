@@ -18,23 +18,11 @@ export function Contact({ homeToggle }: { homeToggle: boolean }) {
         transitionDelay: homeToggle ? "1000ms" : "",
       }}
     >
-      <a href="https://github.com/coco-peter">
-        <Icon
-          icon={githubFill}
-          style={{ color: "#ffffff", fontSize: "40px" }}
-        />
+      <a className="link-icons" href="https://github.com/coco-peter">
+        <Icon icon={githubFill} />
       </a>
-      {/* <a href="">
-            <Icon
-              icon={instagramFill}
-              style={{ color: "#ffffff", fontSize: "40px" }}
-            />
-          </a> */}
-      <a href="https://coco-peter.tistory.com/">
-        <Icon
-          icon={welcomeWriteBlog}
-          style={{ color: "#ffffff", fontSize: "40px" }}
-        />
+      <a className="link-icons" href="https://coco-peter.tistory.com/">
+        <Icon icon={welcomeWriteBlog} />
       </a>
     </div>
   );
