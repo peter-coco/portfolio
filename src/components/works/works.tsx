@@ -47,10 +47,10 @@ function Worklist({
           id="links"
           style={{ display: "flex", margin: "0 auto", gap: "30px" }}
         >
-          <a className="link-icons" href={projectUrl} target="_blank">
+          <a className="works-link-icons" href={projectUrl} target="_blank">
             <Icon icon={linkOut} />
           </a>
-          <a className="link-icons" href={projectGitUrl} target="_blank">
+          <a className="works-link-icons" href={projectGitUrl} target="_blank">
             <Icon icon={githubFill} />
           </a>
         </div>

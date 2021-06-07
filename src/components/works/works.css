@@ -88,12 +88,12 @@
   margin-right: 10px;
 }
 
-.link-icons {
+.works-link-icons {
   font-size: 40px;
   color: #ffffff;
 }
 
-.link-icons:hover {
+.works-link-icons:hover {
   color: #f2c94c;
   transition: color 300ms ease;
 }
@@ -157,24 +157,6 @@
 }
 
 @media (max-width: 600px) {
-  .works-list-detail-title {
-    font-size: 18px;
-    margin-bottom: 5px;
-  }
-
-  .works-list-detail-subscription {
-    font-size: 14px;
-    margin-bottom: 5px;
-  }
-
-  .works-list-detail-languages {
-    margin-bottom: 5px;
-  }
-  .languages-icons,
-  .link-icons {
-    font-size: 20px;
-  }
-
   #works-wrap {
     width: 280px;
     height: 200px;
@@ -203,7 +185,7 @@
     margin-bottom: 3px;
   }
   .languages-icons,
-  .link-icons {
+  .works-link-icons {
     font-size: 15px;
   }
 }
