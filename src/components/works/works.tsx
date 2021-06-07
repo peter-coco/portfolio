@@ -7,7 +7,7 @@ import typescriptIcon from "@iconify/icons-cib/typescript";
 import linkOut from "@iconify/icons-akar-icons/link-out";
 import githubFill from "@iconify/icons-akar-icons/github-fill";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 import project1 from "../../image/projects1.png";
 import project2 from "../../image/projects2.png";
@@ -61,8 +61,8 @@ function Worklist({
 
 export function Works({ worksToggle }: { worksToggle: boolean }) {
   const [projectsIdx, setProjectsIdx] = useState<number>(0);
+  const projectsCnt = 3;
   const [workListWidth, setWorkListWidth] = useState<number>(window.innerWidth);
-
   // console.log(project1, project2, project3);
   const workListArray = [
     [
@@ -91,14 +91,28 @@ export function Works({ worksToggle }: { worksToggle: boolean }) {
     ],
   ];
 
-  useEffect(() => {
-    const alarmZoneTimer = setInterval(() => {
-      setProjectsIdx((pre) => (pre + 1 === 3 ? 0 : pre + 1));
-      // console.log(`hello : ${alarmZoneBannerIdx}`);
-    }, 8000);
+  const [alarmZoneTimerToggle, setAlarmZoneTimerToggle] = useState(false);
 
-    return () => clearInterval(alarmZoneTimer);
-  }, []);
+  const alarmZoneTimerOn = useCallback(() => {
+    setAlarmZoneTimerToggle(true);
+    // console.log("mouse leave");
+  }, [setAlarmZoneTimerToggle]);
+
+  const alarmZoneTimerOff = useCallback(() => {
+    setAlarmZoneTimerToggle(false);
+    // console.log("mouse enter");
+  }, [setAlarmZoneTimerToggle]);
+
+  useEffect(() => {
+    if (alarmZoneTimerToggle) {
+      const alarmZoneTimer = setInterval(() => {
+        setProjectsIdx((pre) => (pre + 1 === projectsCnt ? 0 : pre + 1));
+        // console.log(`hello : ${alarmZoneBannerIdx}`);
+      }, 5000);
+
+      return () => clearInterval(alarmZoneTimer);
+    }
+  }, [alarmZoneTimerToggle, setAlarmZoneTimerToggle]);
 
   useEffect(() => {
     function resizeEventFunc() {
@@ -108,6 +122,10 @@ export function Works({ worksToggle }: { worksToggle: boolean }) {
     window.addEventListener("resize", resizeEventFunc);
     return () => window.removeEventListener("resize", resizeEventFunc);
   }, []);
+
+  useEffect(() => {
+    worksToggle ? alarmZoneTimerOn() : alarmZoneTimerOff();
+  }, [worksToggle]);
 
   return (
     <div
@@ -121,7 +139,11 @@ export function Works({ worksToggle }: { worksToggle: boolean }) {
         transitionDelay: worksToggle ? "1000ms" : "",
       }}
     >
-      <div id="works-wrap">
+      <div
+        id="works-wrap"
+        onMouseEnter={alarmZoneTimerOff}
+        onMouseLeave={alarmZoneTimerOn}
+      >
         <ul
           id="works-lists"
           style={{
