@@ -7,6 +7,7 @@ import { About } from "./components/about/about";
 import { Works } from "./components/works/works";
 import { Navbar } from "./components/navbar/navbar";
 import { Home } from "./components/home/home";
+import { Skills } from "./components/skills/skills";
 
 function App() {
   const [homeToggle, setHomeToggle] = useState(true);
@@ -25,6 +26,7 @@ function App() {
       />
       <Home homeToggle={homeToggle} />
       <About aboutToggle={aboutToggle} />
+      <Skills />
       <Works worksToggle={worksToggle} />
     </div>
   );

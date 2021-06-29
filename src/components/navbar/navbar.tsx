@@ -34,8 +34,8 @@ export function Navbar({
           // src="image/navbar-logo.png"
           src={nav_logo}
           alt="navbar_logo"
-          width="70"
-          height="70"
+          width="50"
+          height="50"
         />
         <ul>
           <li

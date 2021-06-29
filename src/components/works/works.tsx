@@ -31,7 +31,7 @@ function Worklist({
   projectGitUrl: string;
 }) {
   return (
-    <li className="works-list">
+    <div className="works-list">
       <img src={imageSrc} alt="" className="works-list-image" />
       <div className="works-list-detail">
         <div className="works-list-detail-title">{title}</div>
@@ -55,7 +55,7 @@ function Worklist({
           </a>
         </div>
       </div>
-    </li>
+    </div>
   );
 }
 
@@ -139,18 +139,7 @@ export function Works({ worksToggle }: { worksToggle: boolean }) {
         onMouseEnter={alarmZoneTimerOff}
         onMouseLeave={alarmZoneTimerOn}
       >
-        <ul
-          id="works-lists"
-          style={
-            {
-              // transition: "1000ms",
-              // transform:
-              //   workListWidth > 600
-              //     ? `translate(${projectsIdx * -500}px)`
-              //     : `translate(${projectsIdx * -280}px)`,
-            }
-          }
-        >
+        <div id="works-lists">
           {workListArray.map(
             ([
               imageSrc,
@@ -171,61 +160,8 @@ export function Works({ worksToggle }: { worksToggle: boolean }) {
               />
             )
           )}
-        </ul>
-      </div>
-      {/* <div id="imageSequenceOperation">
-        <div
-          onClick={() => {
-            setProjectsIdx((pre) => (pre - 1 === -1 ? 2 : pre - 1));
-          }}
-          className="imageSequenceChangeBtn"
-        >
-          <Icon
-            icon={sharpNavigateNext}
-            style={{
-              transform: "rotate(-180deg)",
-            }}
-          />
         </div>
-        <div id="imageSequence">
-          <div
-            className="sequence"
-            onClick={() => {
-              setProjectsIdx((pre) => 0);
-            }}
-            style={{
-              backgroundColor: projectsIdx === 0 ? "#f2c94c" : "#ffffff",
-            }}
-          ></div>
-          <div
-            className="sequence"
-            onClick={() => {
-              setProjectsIdx((pre) => 1);
-            }}
-            style={{
-              backgroundColor: projectsIdx === 1 ? "#f2c94c" : "#ffffff",
-            }}
-          ></div>
-          <div
-            className="sequence"
-            onClick={() => {
-              setProjectsIdx((pre) => 2);
-            }}
-            style={{
-              backgroundColor: projectsIdx === 2 ? "#f2c94c" : "#ffffff",
-            }}
-          ></div>
-        </div> */}
-
-      {/* <div
-          onClick={() => {
-            setProjectsIdx((pre) => (pre + 1 === 3 ? 0 : pre + 1));
-          }}
-          className="imageSequenceChangeBtn"
-        >
-          <Icon icon={sharpNavigateNext} />
-        </div> */}
-      {/* </div> */}
+      </div>
     </div>
   );
 }

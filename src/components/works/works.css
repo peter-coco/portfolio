@@ -1,6 +1,6 @@
 #works {
   width: 100%;
-  padding: 0 20px;
+  padding: 50px 20px;
   box-sizing: border-box;
   height: 1500px;
   display: flex;
@@ -13,19 +13,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 500px;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
 }
 
 #works-lists {
-  width: 500px;
-  height: 404px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .works-list {
   width: 100%;
   position: relative;
   text-align: center;
+  display: flex;
 }
 
 .works-list-image {
@@ -36,16 +41,11 @@
 }
 
 .works-list-detail {
-  position: absolute;
-  top: 0px;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  opacity: 0;
-  transform: translateY(-50px);
-  transition: all 300ms ease;
 }
 
 .works-list-detail-subscription {
@@ -122,16 +122,16 @@
   color: #f2c94c;
 }
 
-#works-lists:hover .works-list-image {
+/* #works-lists:hover .works-list-image {
   opacity: 0.3;
   transition: all 300ms ease;
-}
+} */
 
-#works-lists:hover .works-list-detail {
+/* #works-lists:hover .works-list-detail {
   opacity: 1;
   transform: translateY(0);
   transition: all 300ms ease;
-}
+} */
 
 @media (max-width: 800px) {
   .imageSequenceChangeBtn {
