@@ -1,10 +1,10 @@
 #home-main-wrap {
-  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
-  top: 25%;
+  justify-content: center;
   width: 100%;
+  height: 600px;
 }
 
 #home-main-logo-img {
@@ -30,50 +30,16 @@
   color: #f2c94c;
 }
 
-#home-others-wrap {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  top: 25%;
-  width: 100%;
-}
-
-#home-others-logo-img {
-  /* transform: translate(-650px, -160px); */
-  clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
-  visibility: hidden;
-  transition: all 800ms;
-  /* transition-delay: 1000ms; */
-}
-
-#home-others-logo-text {
-  position: relative;
-
-  width: 90%;
-  margin: 0 auto;
-  text-align: center;
-  top: 20px;
-  clip-path: polygon(100% 0, 0 0, 0 0, 100% 0);
-  visibility: hidden;
-  transition: all 300ms;
-  font-size: 23px;
-  color: #f2c94c;
-}
-
 @media (max-width: 800px) {
-  #home-main-logo-img,
-  #home-others-logo-img {
+  #home-main-logo-img {
     width: 50vw;
     height: 30vh;
   }
 
-  #home-main-logo-text,
-  #home-others-logo-text {
+  #home-main-logo-text {
     position: relative;
     bottom: -15px;
     width: 100%;
-    /* text-align: center; */
     font-size: 1.5rem;
   }
 }

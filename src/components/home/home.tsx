@@ -4,19 +4,16 @@ import "./home.css";
 
 export function Home({ homeToggle }: { homeToggle: boolean }) {
   return (
-    <div id={homeToggle ? "home-main-wrap" : "home-others-wrap"}>
+    <div id="home-main-wrap">
       <img
-        id={homeToggle ? "home-main-logo-img" : "home-others-logo-img"}
+        id="home-main-logo-img"
         // src="/image/main-logo.png"
         src={main_logo}
         alt="ff"
         width="350"
         height="400"
       />
-
-      <div id={homeToggle ? "home-main-logo-text" : "home-others-logo-text"}>
-        Front-End Developer
-      </div>
+      <div id="home-main-logo-text">Front-End Developer</div>
       <Contact homeToggle={homeToggle} />
     </div>
   );

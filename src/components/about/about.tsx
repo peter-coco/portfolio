@@ -48,13 +48,7 @@ export function About({ aboutToggle }: { aboutToggle: boolean }) {
     <div
       id="about"
       style={{
-        visibility: aboutToggle ? "visible" : "hidden",
-        clipPath: aboutToggle
-          ? "polygon(100% 0, 0 0, 0 100%, 100% 100%)"
-          : "polygon(100% 0, 0 0, 0 0, 100% 0)",
-        overflow: "hidden",
-        transition: aboutToggle ? "all 800ms" : "all 800ms",
-        transitionDelay: aboutToggle ? "1000ms" : "",
+        visibility: "visible",
       }}
     >
       <div id="about-wrap">

@@ -27,15 +27,13 @@ export function Navbar({
   }, [setNavbarMenuBtnActivate]);
 
   return (
-    <nav id={homeToggle ? "navbar-main" : "navbar-others"}>
-      <div id={homeToggle ? "navbar-main-menus" : "navbar-others-menus"}>
+    <nav id="navbar-main">
+      <div id="navbar-main-menus">
         <img
-          id={
-            homeToggle ? "navbar-main-menus-logo" : "navbar-others-menus-logo"
-          }
+          id="navbar-main-menus-logo"
           // src="image/navbar-logo.png"
           src={nav_logo}
-          alt="fd"
+          alt="navbar_logo"
           width="70"
           height="70"
         />
@@ -91,7 +89,7 @@ export function Navbar({
         </ul>
       </div>
 
-      <button
+      {/* <button
         id={navbarMenuBtnActivate ? "navbar-menuBtn-active" : "navbar-menuBtn"}
         onClick={navbarMenuBtnActivateFunc}
       >
@@ -161,8 +159,8 @@ export function Navbar({
             WORKS
           </li>
         </ul>
-        <img src={nav_logo} alt="fd" width="70" height="70" />
-      </div>
+        <img src={nav_logo} alt="fd" width="70" height="70" /> 
+      </div>*/}
     </nav>
   );
 }

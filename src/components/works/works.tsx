@@ -131,12 +131,7 @@ export function Works({ worksToggle }: { worksToggle: boolean }) {
     <div
       id="works"
       style={{
-        visibility: worksToggle ? "visible" : "hidden",
-        clipPath: worksToggle
-          ? "polygon(100% 0, 0 0, 0 100%, 100% 100%)"
-          : "polygon(100% 0, 0 0, 0 0, 100% 0)",
-        transition: worksToggle ? "all 800ms" : "all 800ms",
-        transitionDelay: worksToggle ? "1000ms" : "",
+        visibility: "visible",
       }}
     >
       <div
@@ -146,13 +141,15 @@ export function Works({ worksToggle }: { worksToggle: boolean }) {
       >
         <ul
           id="works-lists"
-          style={{
-            transition: "1000ms",
-            transform:
-              workListWidth > 600
-                ? `translate(${projectsIdx * -500}px)`
-                : `translate(${projectsIdx * -280}px)`,
-          }}
+          style={
+            {
+              // transition: "1000ms",
+              // transform:
+              //   workListWidth > 600
+              //     ? `translate(${projectsIdx * -500}px)`
+              //     : `translate(${projectsIdx * -280}px)`,
+            }
+          }
         >
           {workListArray.map(
             ([
@@ -176,7 +173,7 @@ export function Works({ worksToggle }: { worksToggle: boolean }) {
           )}
         </ul>
       </div>
-      <div id="imageSequenceOperation">
+      {/* <div id="imageSequenceOperation">
         <div
           onClick={() => {
             setProjectsIdx((pre) => (pre - 1 === -1 ? 2 : pre - 1));
@@ -218,17 +215,17 @@ export function Works({ worksToggle }: { worksToggle: boolean }) {
               backgroundColor: projectsIdx === 2 ? "#f2c94c" : "#ffffff",
             }}
           ></div>
-        </div>
+        </div> */}
 
-        <div
+      {/* <div
           onClick={() => {
             setProjectsIdx((pre) => (pre + 1 === 3 ? 0 : pre + 1));
           }}
           className="imageSequenceChangeBtn"
         >
           <Icon icon={sharpNavigateNext} />
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
     </div>
   );
 }
